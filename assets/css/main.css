@@ -1,0 +1,59 @@
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.02); /* TO REMOVE */
+}
+
+.logo-image {
+    width: 100%;
+    height: auto;
+}
+
+.flex-container {
+    display: flex;
+    gap: 10px; /* Space between columns */
+    height: 92vh; /* Full viewport height */
+    
+}
+
+.flex-child {
+    flex: 1; /* Distribute space equally */
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.left-column {
+    max-height: 94vh; /* Limit height to viewport */
+    overflow: auto; /* pour un défilement horizontal et vertical */
+    font-family: inherit;
+    background-color: white;
+    margin-left: 50px;
+}
+
+.right-column {
+    max-height: 94vh; /* Limit height to viewport */
+    overflow: auto; /* pour un défilement horizontal et vertical */
+    font-family: inherit;
+    background-color: white;
+    margin-right: 50px;
+    padding: 40px;
+}
+
+.left-column::-webkit-scrollbar {
+    display: none; /* Pour Chrome, Safari et Opera */
+}
+
+.right-column::-webkit-scrollbar {
+    display: none; /* Pour Chrome, Safari et Opera */
+}
+
+/* Optional: Stack vertically on small screens */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+}
